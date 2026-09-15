@@ -9,11 +9,8 @@
   "infinite_arrow": null,
   "remove_tag_liga": false,
   "weight_mapping": {
-    //"thin": 100,
     "thin": 250,
-    // "extralight": 200,
     "extralight": 300,
-    // "light": 300,
     "light": 350,
     "regular": 400,
     "medium": 500,
