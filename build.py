@@ -81,7 +81,7 @@ def check_ftcli():
 WIDTH_MAP = {
     "default": 600,
     # "narrow": 550,
-    "narrow": 525,
+    "narrow": 550,
     "slim": 500,
 }
 
