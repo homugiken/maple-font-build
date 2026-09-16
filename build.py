@@ -765,8 +765,10 @@ class BuildOption:
         suffix = font_config.get_nf_suffix()
         if font_config.should_build_nf_cn():
             self.cn_base_font_dir = self.output_nf
-            self.cn_suffix = f"NF{suffix} CN"
-            self.cn_suffix_compact = f"NF{suffix}-CN"
+            # self.cn_suffix = f"NF{suffix} CN"
+            # self.cn_suffix_compact = f"NF{suffix}-CN"
+            self.cn_suffix = f""
+            self.cn_suffix_compact = f""
         else:
             self.cn_base_font_dir = self.ttf_base_dir
             self.cn_suffix = self.cn_suffix_compact = "CN"
@@ -1359,11 +1361,11 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
 
     update_font_names(
         font=cn_font,
-        # family_name=f"{font_config.family_name} {build_option.cn_suffix}{style_cn_with_prefix_space}",
-        family_name=f"{font_config.family_name} {style_cn_with_prefix_space}",
+        family_name=f"{font_config.family_name} {build_option.cn_suffix}{style_cn_with_prefix_space}",
+        # family_name=f"{font_config.family_name} {style_cn_with_prefix_space}",
         style_name=style_in_2,
-        # full_name=f"{font_config.family_name} {build_option.cn_suffix} {style_in_17}",
-        full_name=f"{font_config.family_name} {style_in_17}",
+        full_name=f"{font_config.family_name} {build_option.cn_suffix} {style_in_17}",
+        # full_name=f"{font_config.family_name} {style_in_17}",
         version_str=font_config.version_str,
         postscript_name=postscript_name,
         unique_identifier=get_unique_identifier(
