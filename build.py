@@ -765,10 +765,8 @@ class BuildOption:
         suffix = font_config.get_nf_suffix()
         if font_config.should_build_nf_cn():
             self.cn_base_font_dir = self.output_nf
-            # self.cn_suffix = f"NF{suffix} CN"
-            # self.cn_suffix_compact = f"NF{suffix}-CN"
-            self.cn_suffix = f""
-            self.cn_suffix_compact = f""
+            self.cn_suffix = f"NF{suffix} CN"
+            self.cn_suffix_compact = f"NF{suffix}-CN"
         else:
             self.cn_base_font_dir = self.ttf_base_dir
             self.cn_suffix = self.cn_suffix_compact = "CN"
