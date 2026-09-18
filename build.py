@@ -1355,15 +1355,16 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
         style_name_compact=style_compact_cn,
     )
 
-    postscript_name = f"{font_config.family_name_compact}-{build_option.cn_suffix_compact}-{style_compact_cn}"
+    # postscript_name = f"{font_config.family_name_compact}-{build_option.cn_suffix_compact}-{style_compact_cn}"
+    postscript_name = f"{font_config.family_name_compact}{build_option.cn_suffix_compact}-{style_compact_cn}"
 
     update_font_names(
         font=cn_font,
-        family_name=f"{font_config.family_name} {build_option.cn_suffix}{style_cn_with_prefix_space}",
-        # family_name=f"{font_config.family_name} {style_cn_with_prefix_space}",
+        # family_name=f"{font_config.family_name} {build_option.cn_suffix}{style_cn_with_prefix_space}",
+        # full_name=f"{font_config.family_name} {build_option.cn_suffix} {style_in_17}",
+        family_name=f"{font_config.family_name}{build_option.cn_suffix}{style_cn_with_prefix_space}",
+        full_name=f"{font_config.family_name}{build_option.cn_suffix} {style_in_17}",
         style_name=style_in_2,
-        full_name=f"{font_config.family_name} {build_option.cn_suffix} {style_in_17}",
-        # full_name=f"{font_config.family_name} {style_in_17}",
         version_str=font_config.version_str,
         postscript_name=postscript_name,
         unique_identifier=get_unique_identifier(
@@ -1372,7 +1373,8 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
             narrow=font_config.cn["narrow"],
         ),
         is_skip_subfamily=is_skip_subfamily,
-        preferred_family_name=f"{font_config.family_name} {build_option.cn_suffix}",
+        # preferred_family_name=f"{font_config.family_name} {build_option.cn_suffix}",
+        preferred_family_name=f"{font_config.family_name}{build_option.cn_suffix}",
         preferred_style_name=style_in_17,
     )
 
