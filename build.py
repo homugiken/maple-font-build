@@ -1356,14 +1356,14 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
     )
 
     # postscript_name = f"{font_config.family_name_compact}-{build_option.cn_suffix_compact}-{style_compact_cn}"
-    postscript_name = f"{font_config.family_name_compact}{build_option.cn_suffix_compact}-{style_compact_cn}"
+    postscript_name = f"{font_config.family_name_compact}-{style_compact_cn}"
 
     update_font_names(
         font=cn_font,
         # family_name=f"{font_config.family_name} {build_option.cn_suffix}{style_cn_with_prefix_space}",
         # full_name=f"{font_config.family_name} {build_option.cn_suffix} {style_in_17}",
-        family_name=f"{font_config.family_name}{build_option.cn_suffix}{style_cn_with_prefix_space}",
-        full_name=f"{font_config.family_name}{build_option.cn_suffix} {style_in_17}",
+        family_name=f"{font_config.family_name}{style_cn_with_prefix_space}",
+        full_name=f"{font_config.family_name} {style_in_17}",
         style_name=style_in_2,
         version_str=font_config.version_str,
         postscript_name=postscript_name,
