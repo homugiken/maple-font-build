@@ -10,12 +10,12 @@
   "remove_tag_liga": false,
   "weight_mapping": {
     "thin": 100,
-    "extralight": 200,
+    "extralight": 250,
     "light": 300,
-    "regular": 400,
-    "medium": 500,
-    "semibold": 600,
-    "bold": 700,
+    "regular": 350,
+    "medium": 400,
+    "semibold": 500,
+    "bold": 600,
     "extrabold": 800
   },
   "line_height": 1.0,
