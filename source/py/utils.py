@@ -591,18 +591,18 @@ def update_font_names(
     set_font_name(font, postscript_name, 6)
 
     print(f" family_name: {family_name}")
-    print(f" style_name: {style_name}")
-    print(f" unique_identifier: {unique_identifier}")
-    print(f" full_name: {full_name}")
-    print(f" version_str: {version_str}")
-    print(f" postscript_name: {postscript_name}")
+    # print(f" style_name: {style_name}")
+    # print(f" unique_identifier: {unique_identifier}")
+    # print(f" full_name: {full_name}")
+    # print(f" version_str: {version_str}")
+    # print(f" postscript_name: {postscript_name}")
 
     if not is_skip_subfamily and preferred_family_name and preferred_style_name:
         set_font_name(font, preferred_family_name, 16)
         set_font_name(font, preferred_style_name, 17)
         
-        print(f" preferred_family_name: {preferred_family_name}")
-        print(f" preferred_style_name: {preferred_style_name}")
+        # print(f" preferred_family_name: {preferred_family_name}")
+        # print(f" preferred_style_name: {preferred_style_name}")
 
 
 DEFAULT_COMPAT_ALIASES: dict[int, int] = {
