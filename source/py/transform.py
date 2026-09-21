@@ -288,6 +288,9 @@ def change_glyph_width_or_scale(
         - The scaling and translation are applied to the glyph coordinates, and the
           bounding box values are recalculated.
     """
+    print(f" match_width: {match_width}")
+    print(f" target_width: {target_width}")
+    print(f" scale_factor: {scale_factor}")
     font["hhea"].advanceWidthMax = target_width  # type: ignore
     glyf: Any = font["glyf"]
     hmtx: Any = font["hmtx"]
