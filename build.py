@@ -1392,6 +1392,8 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
         if font_config.cn["scale_factor"] != (1.0, 1.0)
         else None
     )
+    print(f" target_width: {target_width}")
+    print(f" scale_factor: {scale_factor}")
     special_scale_names = [
         "ellipsis.full",
         "quoteleft.full",
@@ -1421,6 +1423,7 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
         else:
             scale_factor = (1.0, 1.0)
 
+        print(f" change_glyph_width_or_scale: 1")
         change_glyph_width_or_scale(
             font=cn_font,
             match_width=match_width,
@@ -1429,6 +1432,7 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
             special_names=special_scale_names,
         )
     elif font_config.get_width_name():
+        print(f" change_glyph_width_or_scale: 2")
         change_glyph_width_or_scale(
             font=cn_font,
             match_width=2 * font_config.glyph_width,
