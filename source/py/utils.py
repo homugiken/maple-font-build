@@ -551,9 +551,10 @@ def parse_style_name(style_name_compact: str):
     #
     # same as `ftcli assistant commit . --ls 400 700`
     # https://github.com/ftCLI/FoundryTools-CLI/issues/166#issuecomment-2095756721
-    base_subfamily_list = ["Regular", "Bold", "Italic", "BoldItalic"]
+    # base_subfamily_list = ["Regular", "Bold", "Italic", "BoldItalic"]
+    base_subfamily_list = []
     if style_name_compact in base_subfamily_list:
-        return "", _style_name, _style_name, False, is_italic
+        return "", _style_name, _style_name, True, is_italic
     else:
         return (
             " " + style_name_compact.replace("Italic", ""),
