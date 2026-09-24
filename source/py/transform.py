@@ -348,7 +348,8 @@ def change_glyph_width_or_scale(
         )
 
         scaled_width = int(round(width * scale_w))
-        delta = (target_width - scaled_width) / 2
+        # delta = (target_width - scaled_width) / 2
+        delta = (target_width - scaled_width) // 2
 
         glyph.coordinates.translate((delta, 0))
         glyph.xMin, glyph.yMin, glyph.xMax, glyph.yMax = (
