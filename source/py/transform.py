@@ -348,15 +348,15 @@ def change_glyph_width_or_scale(
         )
 
         scaled_width = int(round(width * scale_w))
-        # delta = (target_width - scaled_width) / 2
-        delta = (target_width - scaled_width) // 2
+        delta = (target_width - scaled_width) / 2
 
         glyph.coordinates.translate((delta, 0))
         glyph.xMin, glyph.yMin, glyph.xMax, glyph.yMax = (
             glyph.coordinates.calcIntBounds()
         )
 
-        new_lsb = lsb + int(round(delta))
+        # new_lsb = lsb + int(round(delta))
+        new_lsb = int(round(lsb * scale_w + delta))
         hmtx[glyph_name] = (target_width, new_lsb)
 
     # Recalculate composite bounds after all components (including combining
