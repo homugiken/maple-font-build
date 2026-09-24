@@ -557,7 +557,7 @@ def parse_style_name(style_name_compact: str):
         return "", _style_name, _style_name, True, is_italic
     else:
         return (
-            " " + style_name_compact.replace("Italic", ""),
+            " " + style_name_compact.replace("Italic", "") if style_name_compact != "Italic" else "Italic",
             "Italic" if is_italic else "Regular",
             _style_name,
             False,
