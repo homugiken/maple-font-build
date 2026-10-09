@@ -16,7 +16,9 @@
     "medium": 500,
     "semibold": 600,
     "bold": 700,
-    "extrabold": 800
+    "extrabold": 800,
+    "black": 900,
+    "extrablack": 950
   },
   "line_height": 1.0,
   "width": "default",
